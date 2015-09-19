@@ -1,7 +1,7 @@
 console.log('Hello, world!');
 var page = require('webpage').create();
 	console.log("space");
-page.open('http://www.google.com', function(status) {
+page.open('http://www.geographycollector.com', function(status) {
 	console.log("Status: " + status);
 	if(status === "success") {
 		console.log('success');
