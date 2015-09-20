@@ -5,6 +5,7 @@ page.open('http://www.geographycollector.com/', function() {
 	console.log("Success");
 });
 
+phantom.exit();
 
 
 
