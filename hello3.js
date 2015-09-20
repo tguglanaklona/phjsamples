@@ -1,9 +1,10 @@
 console.log('Hello, world!');
 var page = require('webpage').create();
-page.open('http://geographycollector.com/', function(){
-	page.render('github.png');
-	console.log('Good Bye!');
-	phantom.exit();
+page.open('http://www.geographycollector.com/', function() {
+	page.render('example.png');
+	console.log("Success");
 });
+
+
 
 
