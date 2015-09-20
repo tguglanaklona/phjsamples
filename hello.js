@@ -3,10 +3,11 @@ var page = require('webpage').create();
 page.open('http://www.geographycollector.com/', function() {
 	page.render('example.png');
 	console.log("Success");
+	phantom.exit();
 });
 
 page.onError = function(msg, trace){
-	/*var msgStack = ['ERROR '+msg];
+	var msgStack = ['ERROR '+msg];
 	if (trace && trace.length) {
 		msgStack.push('TRACE:');
 		trace.forEach(function(t) {
@@ -14,9 +15,9 @@ page.onError = function(msg, trace){
 		});
 	}
 	console.error(msgStack.join('\n'));
-	console.log(msgStack.join('\n'));*/
+	console.log(msgStack.join('\n'));
 
-	console.log(msg);
+	phantom.exit();
 };
 
-phantom.exit();
+
