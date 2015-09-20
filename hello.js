@@ -1,13 +1,8 @@
 console.log('Hello, world!');
 var page = require('webpage').create();
-	console.log("space");
-page.open('http://www.geographycollector.com', function(status) {
-	console.log("Status: " + status);
-	if(status === "success") {
-		console.log('success');
-		page.render('./example.png');
-	}
-	phantom.exit();
+page.open('http://www.geographycollector.com/', function() {
+	page.render('example.png');
+	console.log("Success");
 });
 page.onError = function(msg, trace){
 	var msgStack = ['ERROR '+msg];
